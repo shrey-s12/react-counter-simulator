@@ -8,6 +8,8 @@ const arr = [
 const reducer = (acc, product) => {
     const { name, category } = product;
     acc[category] = acc[category] || [];
+    //This checks whether acc (the accumulator object) already has a property for the current category.
+    //If not, it initializes that property as an empty array ([])
     acc[category].push(name);
     return acc;
 };
